@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en" manifest="dex.appcache">
+<head prefix="og: http://ogp.me/ns#" >
+    <title>Ankush Gutte</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+
+    <meta name="keywords" content="" />
+    <meta name="author" content="Ankush Gutte" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <base href="http://abhijeetmunde.net/">
+    <link rel="icon" type="image/png" href="/img/favicon.png"/>
+
+    <link rel="stylesheet" href="/css/styles.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href='/css/custom.css' rel='stylesheet' type='text/css'>
+<style>
+* {margin: 0; padding: 0;}
+body {background: black;}
+canvas {display: block;}
+</style>
+</head>
+<body>
+    <img id="CBtn" class="mail" src="/img/contacts.png" alt="Contact Me" title="Contact Me" height="42" width="42">
+    <section id="main">	
+    <div class="viewport">
+        <div><canvas id="c"></canvas></div>
+        <div class="world">
+
+            <div id="bar"></div>
+            <div id="hello">
+                <div>
+                    <div></div>
+                    <div>
+
+                        <div>
+                            am
+                            <div class="big">
+                                <strong>25<span>years old</span></strong>
+                            </div>
+                        </div>
+                        <div>
+                            lives in <a class="hover">Pune</a>
+                        </div>
+                        <div>
+                            like <strong><span id="like-slider" class="y-slider"><div><ul style="top: -100%;"><li>ahsjkdhaksjdh</li><li>fsdasd</li><li>ddsdd</li></ul></div></span></strong>
+                        </div>
+                        <div>
+                            studied at <a class="hover">G.C.O.E.Chandrapur</a>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+
+                    <figure class="ello" style="font-size:80%">
+                        <div>
+                            Ankush
+                        </div>
+                    </figure>
+                </div>
+
+                <figure id="main-skills">
+                    <div id="skills-slider1" class="y-slider">MMMM<div><ul style="transition: none; font-size:51%; margin-top:10px;"><li>Project</li></ul></div></div>
+                    Freelancer 
+                </figure>
+			
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" style="margin-top:10px;">X</span>
+      <h2>Contact Me </h2>
+	<h3 style="color:black;"> Contact no : + 919096664530</h3>
+    </div>
+<br/>
+    <div class="modal-body">
+      <form id="contact-form" name="contact-form" method="post" action="mailto:ankushgutte@gmail.com" >
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Firstname *</label>
+                                        <input id="form_name" type="text" name="n" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="l" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="e" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Phone</label>
+                                        <input id="form_phone" type="tel" name="p" class="form-control" placeholder="Please enter your phone">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="m" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input id="mybtn1"  type="submit" class="btn btn-success btn-send" value="Send message">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+    </div>
+	
+    <div class="modal-footer">
+      <h3><div id="status">Form will close after message sending. Thank You !</div></h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("CBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+//making the canvas full screen
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+
+//chinese characters - taken from the unicode charset
+var chinese = "ANKUSH";
+//converting the string into an array of single characters
+chinese = chinese.split("");
+
+var font_size = 7;
+var columns = c.width/font_size; //number of columns for the rain
+//an array of drops - one per column
+var drops = [];
+//x below is the x coordinate
+//1 = y co-ordinate of the drop(same for every drop initially)
+for(var x = 0; x < columns; x++)
+	drops[x] = 1; 
+
+//drawing the characters
+function draw()
+{
+	//Black BG for the canvas
+	//translucent BG to show trail
+	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+	ctx.fillRect(0, 0, c.width, c.height);
+	
+	ctx.fillStyle = "#0F0"; //green text
+	ctx.font = font_size + "px arial";
+	//looping over drops
+	for(var i = 0; i < drops.length; i++)
+	{
+		//a random chinese character to print
+		var text = chinese[Math.floor(Math.random()*chinese.length)];
+		//x = i*font_size, y = value of drops[i]*font_size
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
+		
+		//sending the drop back to the top randomly after it has crossed the screen
+		//adding a randomness to the reset to make the drops scattered on the Y axis
+		if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			drops[i] = 0;
+		
+		//incrementing Y coordinate
+		drops[i]++;
+	}
+}
+
+setInterval(draw, 50);
+
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>debug = 0;</script>
+<script src="/js/jquery.min.js"></script>
+</body>
+</html>
